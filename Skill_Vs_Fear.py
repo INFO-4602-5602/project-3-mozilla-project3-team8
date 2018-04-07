@@ -75,20 +75,15 @@ for value in range(len(skill)):
 			TechNoFear += 1
 		elif (fear[value] == "Other (please specify)"):
 			TechOther += 1
-fruits = ["Tech Savy/Less Privacy", "Tech Savvy/Lose Touch", "Tech Savvy/Less Safe", "Tech Savvy/None Fear", "Tech Savvy/Other"]
-counts = [TechPrivacy, TechLoseTouch, TechLessSafe, TechNoFear, TechOther]
+fruits = ["Tech Savy/No Privacy", "Tech Savvy/Lose Touch", "Tech Savvy/Less Safe", "Tech Savvy/None Fear", "Tech Savvy/Other"]
 
-source = ColumnDataSource(data=dict(fruits=fruits, counts=counts))
+p = figure(x_range=fruits, plot_height=350, title="Fruit Counts",
+           toolbar_location=None, tools="")
 
-p = figure(x_range=fruits, plot_height=350, toolbar_location=None, title="Tech Savvyness vs Biggest Fear's")
-p.vbar(x='fruits', top='counts', width=0.9, source=source, legend="fruits",
-       line_color='white', fill_color=factor_cmap('fruits', palette=Spectral6, factors=fruits))
+p.vbar(x=fruits, top=[TechPrivacy, TechLoseTouch, TechLessSafe, TechNoFear, TechOther], width=0.9)
 
 p.xgrid.grid_line_color = None
 p.y_range.start = 0
-p.y_range.end = 20
-p.legend.orientation = "horizontal"
-p.legend.location = "top_center"
 
 show(p)
 output_file("Skill_Vs_Fear.html", title="Skill Level Vs Biggest Fear")
