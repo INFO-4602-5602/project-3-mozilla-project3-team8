@@ -1,0 +1,60 @@
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Bokeh Plot</title>
+        
+<link rel="stylesheet" href="https://cdn.pydata.org/bokeh/release/bokeh-0.12.14.min.css" type="text/css" />
+        
+<script type="text/javascript" src="https://cdn.pydata.org/bokeh/release/bokeh-0.12.14.min.js"></script>
+<script type="text/javascript">
+    Bokeh.set_log_level("info");
+</script>
+    </head>
+    <body>
+        
+        <div class="bk-root">
+            <div class="bk-plotdiv" id="076d822c-d9d3-4d95-b8c1-3102c691090c"></div>
+        </div>
+        
+        <script type="application/json" id="0daa4c55-5466-419c-a76f-33fd8609ba44">
+          {"7be4777e-8178-4a6d-a461-02db90cce1c8":{"roots":{"references":[{"attributes":{},"id":"5cc67d96-f16e-4c42-9660-25b726eeb39e","type":"BasicTicker"},{"attributes":{"label":{"field":"fruits"},"renderers":[{"id":"cd67a5bf-e4a4-4f37-99d9-8d29d404d59e","type":"GlyphRenderer"}]},"id":"48399196-8914-460c-a734-2d489d75a45b","type":"LegendItem"},{"attributes":{"dimension":1,"plot":{"id":"7f8cd0a8-f365-46b4-a801-9b74cdff6f9f","subtype":"Figure","type":"Plot"},"ticker":{"id":"5cc67d96-f16e-4c42-9660-25b726eeb39e","type":"BasicTicker"}},"id":"4eaf6c74-3dd0-4d4c-8698-64bd0147db04","type":"Grid"},{"attributes":{"bottom_units":"screen","fill_alpha":{"value":0.5},"fill_color":{"value":"lightgrey"},"left_units":"screen","level":"overlay","line_alpha":{"value":1.0},"line_color":{"value":"black"},"line_dash":[4,4],"line_width":{"value":2},"plot":null,"render_mode":"css","right_units":"screen","top_units":"screen"},"id":"14eae415-1ff7-416a-a76e-2d2c7299f4a3","type":"BoxAnnotation"},{"attributes":{"plot":null,"text":"Tech Savvyness vs Biggest Fear's"},"id":"a66a79df-14da-408b-a4f4-bb1845e6e9ef","type":"Title"},{"attributes":{"data_source":{"id":"05026ee8-93f3-46a9-8e99-c617e67b2ec4","type":"ColumnDataSource"},"glyph":{"id":"5f2bb064-7b6f-4f15-b898-291de6a43ef1","type":"VBar"},"hover_glyph":null,"muted_glyph":null,"nonselection_glyph":{"id":"a4b91bc6-062c-4382-98ca-c1e62f1b2833","type":"VBar"},"selection_glyph":null,"view":{"id":"f30e514e-2234-41af-92ff-c64df07b8b92","type":"CDSView"}},"id":"cd67a5bf-e4a4-4f37-99d9-8d29d404d59e","type":"GlyphRenderer"},{"attributes":{},"id":"884d1409-04cf-4d5a-918f-9193ea31669c","type":"BasicTickFormatter"},{"attributes":{"below":[{"id":"4a8d20ac-c460-4316-a05e-58d11eef1505","type":"CategoricalAxis"}],"left":[{"id":"cfed68a6-bd3f-4579-8845-063801575931","type":"LinearAxis"}],"plot_height":350,"renderers":[{"id":"4a8d20ac-c460-4316-a05e-58d11eef1505","type":"CategoricalAxis"},{"id":"c9b38145-9e20-4078-a4ac-dd03685ecad8","type":"Grid"},{"id":"cfed68a6-bd3f-4579-8845-063801575931","type":"LinearAxis"},{"id":"4eaf6c74-3dd0-4d4c-8698-64bd0147db04","type":"Grid"},{"id":"14eae415-1ff7-416a-a76e-2d2c7299f4a3","type":"BoxAnnotation"},{"id":"c22ae20e-ef2e-4613-9f78-04273a15bd5d","type":"Legend"},{"id":"cd67a5bf-e4a4-4f37-99d9-8d29d404d59e","type":"GlyphRenderer"}],"title":{"id":"a66a79df-14da-408b-a4f4-bb1845e6e9ef","type":"Title"},"toolbar":{"id":"67db076a-8691-41e1-b19f-86e128ea5c6d","type":"Toolbar"},"toolbar_location":null,"x_range":{"id":"fbcaf168-afe2-4c68-b83e-e0b9209f3605","type":"FactorRange"},"x_scale":{"id":"9860818a-3938-45fc-83fe-3b64b43ce0c5","type":"CategoricalScale"},"y_range":{"id":"d6e69b7f-e435-4a9e-91db-42e36296f750","type":"DataRange1d"},"y_scale":{"id":"7c70d672-806c-4a35-b25f-c3b4b10334de","type":"LinearScale"}},"id":"7f8cd0a8-f365-46b4-a801-9b74cdff6f9f","subtype":"Figure","type":"Plot"},{"attributes":{"source":{"id":"05026ee8-93f3-46a9-8e99-c617e67b2ec4","type":"ColumnDataSource"}},"id":"f30e514e-2234-41af-92ff-c64df07b8b92","type":"CDSView"},{"attributes":{"factors":["Tech Savy/Less Privacy","Tech Savvy/Lose Touch","Tech Savvy/Less Safe","Tech Savvy/None Fear","Tech Savvy/Other"],"palette":["#3288bd","#99d594","#e6f598","#fee08b","#fc8d59","#d53e4f"]},"id":"3b6a9bca-953b-4927-aca2-40a467b17f32","type":"CategoricalColorMapper"},{"attributes":{"callback":null,"column_names":["fruits","counts"],"data":{"counts":[35132,15533,10594,5274,5982],"fruits":["Tech Savy/Less Privacy","Tech Savvy/Lose Touch","Tech Savvy/Less Safe","Tech Savvy/None Fear","Tech Savvy/Other"]}},"id":"05026ee8-93f3-46a9-8e99-c617e67b2ec4","type":"ColumnDataSource"},{"attributes":{},"id":"93808e2f-df47-42cf-b504-32b04d4467e6","type":"PanTool"},{"attributes":{"fill_alpha":{"value":0.1},"fill_color":{"value":"#1f77b4"},"line_alpha":{"value":0.1},"line_color":{"value":"#1f77b4"},"top":{"field":"counts"},"width":{"value":0.9},"x":{"field":"fruits"}},"id":"a4b91bc6-062c-4382-98ca-c1e62f1b2833","type":"VBar"},{"attributes":{"fill_color":{"field":"fruits","transform":{"id":"3b6a9bca-953b-4927-aca2-40a467b17f32","type":"CategoricalColorMapper"}},"line_color":{"value":"white"},"top":{"field":"counts"},"width":{"value":0.9},"x":{"field":"fruits"}},"id":"5f2bb064-7b6f-4f15-b898-291de6a43ef1","type":"VBar"},{"attributes":{"callback":null,"factors":["Tech Savy/Less Privacy","Tech Savvy/Lose Touch","Tech Savvy/Less Safe","Tech Savvy/None Fear","Tech Savvy/Other"]},"id":"fbcaf168-afe2-4c68-b83e-e0b9209f3605","type":"FactorRange"},{"attributes":{},"id":"8afec336-5fbd-4c5c-bc41-357d9d484c65","type":"WheelZoomTool"},{"attributes":{"active_drag":"auto","active_inspect":"auto","active_scroll":"auto","active_tap":"auto","tools":[{"id":"93808e2f-df47-42cf-b504-32b04d4467e6","type":"PanTool"},{"id":"8afec336-5fbd-4c5c-bc41-357d9d484c65","type":"WheelZoomTool"},{"id":"91ed93f3-e86f-4588-9822-97ad5806100a","type":"BoxZoomTool"},{"id":"3c4866b6-2f84-46f9-acec-9da7a96506fd","type":"SaveTool"},{"id":"2b502003-59a2-46ff-9c37-fdbbbbe08247","type":"ResetTool"},{"id":"9f3e9d46-c601-4a46-89dc-f9713438b51a","type":"HelpTool"}]},"id":"67db076a-8691-41e1-b19f-86e128ea5c6d","type":"Toolbar"},{"attributes":{"overlay":{"id":"14eae415-1ff7-416a-a76e-2d2c7299f4a3","type":"BoxAnnotation"}},"id":"91ed93f3-e86f-4588-9822-97ad5806100a","type":"BoxZoomTool"},{"attributes":{},"id":"40ca02d0-3c70-4e97-ba56-f24fd92db04a","type":"CategoricalTickFormatter"},{"attributes":{},"id":"3c4866b6-2f84-46f9-acec-9da7a96506fd","type":"SaveTool"},{"attributes":{},"id":"9860818a-3938-45fc-83fe-3b64b43ce0c5","type":"CategoricalScale"},{"attributes":{},"id":"2b502003-59a2-46ff-9c37-fdbbbbe08247","type":"ResetTool"},{"attributes":{"callback":null,"end":20,"start":0},"id":"d6e69b7f-e435-4a9e-91db-42e36296f750","type":"DataRange1d"},{"attributes":{},"id":"9f3e9d46-c601-4a46-89dc-f9713438b51a","type":"HelpTool"},{"attributes":{},"id":"7c70d672-806c-4a35-b25f-c3b4b10334de","type":"LinearScale"},{"attributes":{"formatter":{"id":"884d1409-04cf-4d5a-918f-9193ea31669c","type":"BasicTickFormatter"},"plot":{"id":"7f8cd0a8-f365-46b4-a801-9b74cdff6f9f","subtype":"Figure","type":"Plot"},"ticker":{"id":"5cc67d96-f16e-4c42-9660-25b726eeb39e","type":"BasicTicker"}},"id":"cfed68a6-bd3f-4579-8845-063801575931","type":"LinearAxis"},{"attributes":{"formatter":{"id":"40ca02d0-3c70-4e97-ba56-f24fd92db04a","type":"CategoricalTickFormatter"},"plot":{"id":"7f8cd0a8-f365-46b4-a801-9b74cdff6f9f","subtype":"Figure","type":"Plot"},"ticker":{"id":"c9ec5a10-43b3-4fc2-8879-77e37e001a37","type":"CategoricalTicker"}},"id":"4a8d20ac-c460-4316-a05e-58d11eef1505","type":"CategoricalAxis"},{"attributes":{},"id":"c9ec5a10-43b3-4fc2-8879-77e37e001a37","type":"CategoricalTicker"},{"attributes":{"grid_line_color":{"value":null},"plot":{"id":"7f8cd0a8-f365-46b4-a801-9b74cdff6f9f","subtype":"Figure","type":"Plot"},"ticker":{"id":"c9ec5a10-43b3-4fc2-8879-77e37e001a37","type":"CategoricalTicker"}},"id":"c9b38145-9e20-4078-a4ac-dd03685ecad8","type":"Grid"},{"attributes":{"items":[{"id":"48399196-8914-460c-a734-2d489d75a45b","type":"LegendItem"}],"location":"top_center","orientation":"horizontal","plot":{"id":"7f8cd0a8-f365-46b4-a801-9b74cdff6f9f","subtype":"Figure","type":"Plot"}},"id":"c22ae20e-ef2e-4613-9f78-04273a15bd5d","type":"Legend"}],"root_ids":["7f8cd0a8-f365-46b4-a801-9b74cdff6f9f"]},"title":"Bokeh Application","version":"0.12.14"}}
+        </script>
+        <script type="text/javascript">
+          (function() {
+            var fn = function() {
+              Bokeh.safely(function() {
+                (function(root) {
+                  function embed_document(root) {
+                    
+                  var docs_json = document.getElementById('0daa4c55-5466-419c-a76f-33fd8609ba44').textContent;
+                  var render_items = [{"docid":"7be4777e-8178-4a6d-a461-02db90cce1c8","elementid":"076d822c-d9d3-4d95-b8c1-3102c691090c","modelid":"7f8cd0a8-f365-46b4-a801-9b74cdff6f9f"}];
+                  root.Bokeh.embed.embed_items(docs_json, render_items);
+                
+                  }
+                  if (root.Bokeh !== undefined) {
+                    embed_document(root);
+                  } else {
+                    var attempts = 0;
+                    var timer = setInterval(function(root) {
+                      if (root.Bokeh !== undefined) {
+                        embed_document(root);
+                        clearInterval(timer);
+                      }
+                      attempts++;
+                      if (attempts > 100) {
+                        console.log("Bokeh: ERROR: Unable to run BokehJS code because BokehJS library is missing")
+                        clearInterval(timer);
+                      }
+                    }, 10, root)
+                  }
+                })(window);
+              });
+            };
+            if (document.readyState != "loading") fn();
+            else document.addEventListener("DOMContentLoaded", fn);
+          })();
+        </script>
+    </body>
+</html>
