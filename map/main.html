@@ -23,6 +23,7 @@
 	//configuration
 	const colorVariable = 'avg';
 	const geoIDVariable = 'id';
+	const entriesVariable = 'numEntries';
 	const format = d3.format(',');
 
 	// Set tooltips
@@ -30,6 +31,11 @@
 		.attr('class', 'd3-tip')
 		.offset([-10, 0])
 		.html(d => `<strong>Country: </strong><span class='details'>${d.properties.name}<br></span><strong>Avg. number of tech defined: </strong><span class='details'>${format(d[colorVariable])}</span>`);
+		
+		//Replace the above .html with this one if I can get the thing to work showing the number of entries
+		//.html(d => `<strong>Country: </strong><span class='details'>${d.properties.name}<br></span><strong>Avg. number of tech defined: </strong><span class='details'>${format(d[colorVariable])}<br></span><strong>Number of responses: </strong><span class='details'>${format(d[entriesVariable])}</span>`);
+		
+	
 	
 	tip.direction(function(d) {
 		  if (d.properties.name === 'Antarctica') return 'n';
@@ -102,7 +108,6 @@
 	const height = 500 - margin.top - margin.bottom;
 	
 	var color = d3.scaleQuantile()
-		//.domain([0,1,2,3,4,5,6,7,8,9])
 		.range([
 			"rgb(247,255,247)", 
 			"rgb(204,255,204)", 
@@ -149,18 +154,21 @@
   			})
 			
 			const colorVariableValueByID = {};
+			const totalEntriesByID = {};
 		
-			console.log(data);
-			console.log(geography);
-		
-			data.forEach(d => { colorVariableValueByID[d[geoIDVariable]] = d[colorVariable]; });
-  			geography.features.forEach(d => { d[colorVariable] = colorVariableValueByID[d.id] });
+			data.forEach(d => { 
+				colorVariableValueByID[d[geoIDVariable]] = d[colorVariable]; 
+				totalEntriesByID[d[geoIDVariable]] = d[entriesVariable];
+			});
+  			geography.features.forEach(d => {d[colorVariable] = colorVariableValueByID[d.id]});
+			geography.features.forEach(d => {d[entriesVariable] = totalEntriesByID[d.numEntries]});
 		
 			// calculate jenks natural breaks
 			const numberOfClasses = color.range().length - 1;
 			const jenksNaturalBreaks = jenks(data.map(d => d[colorVariable]), numberOfClasses);
-			console.log('numberOfClasses', numberOfClasses);
-			console.log('jenksNaturalBreaks', jenksNaturalBreaks);
+		
+			//console.log('numberOfClasses', numberOfClasses);
+			//console.log('jenksNaturalBreaks', jenksNaturalBreaks);
 		
 		    // set the domain of the color scale based on our data
   			color
@@ -190,6 +198,7 @@
 					//tooltips!
 					.on('mouseover', function(d) {
 						tip.show(d);
+						console.log(d);
 						d3.select(this)
 							.style('fill-opacity', 1)
          					.style('stroke-opacity', 1)
