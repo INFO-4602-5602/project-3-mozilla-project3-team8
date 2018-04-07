@@ -75,12 +75,12 @@ for value in range(len(skill)):
 			TechNoFear += 1
 		elif (fear[value] == "Other (please specify)"):
 			TechOther += 1
-fruits = ["Tech Savy/No Privacy", "Tech Savvy/Lose Touch", "Tech Savvy/Less Safe", "Tech Savvy/None Fear", "Tech Savvy/Other"]
+skills = ["Tech Savy/No Privacy", "Tech Savvy/Lose Touch", "Tech Savvy/Less Safe", "Tech Savvy/None Fear", "Tech Savvy/Other"]
 
-p = figure(x_range=fruits, plot_height=350, title="Fruit Counts",
+p = figure(x_range=skills, plot_height=350, title="Tech Savvy People's Biggest Technological Fear",
            toolbar_location=None, tools="")
 
-p.vbar(x=fruits, top=[TechPrivacy, TechLoseTouch, TechLessSafe, TechNoFear, TechOther], width=0.9)
+p.vbar(x=skills, top=[TechPrivacy, TechLoseTouch, TechLessSafe, TechNoFear, TechOther], width=0.9)
 
 p.xgrid.grid_line_color = None
 p.y_range.start = 0

@@ -32,11 +32,12 @@ The second visualization shows a bar chart for each of the attributes from the q
 ## Visualization 3
 
 To run:
+1)In terminal, run "python Skill_Vs_Fear.py". 
+2)It will then open up a chosen web browser and display the visualization
 ```
-1) 
-2)
-```
+About:
 
+The third visualization shows a bar chart showing what tech savvy people are afraid of when it comes to technology. The code takes only the rows containing tech savvy and adds up what they are afraid of. There are 5 different options for the tech savvy people to be afraid of. The visualization's x-axis has the fear and the y-axis is the number of users that picked what their fear is. According to the data, it seems that tech savvy people believe they will have less privacy in the future. I used a bar chart since I believed it was the easiest way to tell the difference in opinions for tech savvy people. 
 
 
 ___
@@ -51,4 +52,5 @@ ___
 
 * **Evan James** - [Github](https://github.com/ejames917) 
 * **Jamie Ackerson** - [Github](https://github.com/jackerson)
+* **Matthew Coker** - [Github](https://github.com/matthewcoker)
 
